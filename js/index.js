@@ -1,15 +1,24 @@
 // slå dig løs her... 
 const heroElement = document.querySelector(".hero")
 
-heros.forEach(function (hero) {
-    const imageElement = document.createElement("img");
-    imageElement
+const imageElement = document.createElement("img");
+imageElement.src = hero.image;
 
-    const headlineElement = document.createElement("h1");
-    headlineElement.textContent = hero.headline;
+const headlineElement = document.createElement("h1");
+headlineElement.textContent = hero.headline;
 
-    heroElement.append(imageElement, headlineElement);
-})
+const copyElement = document.createElement("p");
+copyElement.textContent = hero.copy;
+
+const iconElement = document.createElement("img");
+iconElement.src = hero.icon;
+
+heroElement.append(
+    imageElement,
+    headlineElement,
+    copyElement,
+    iconElement
+);
 
 //eksempel på at udskrive alle overskrifter i services i konsollen:
 services.forEach(service => console.log(service.headline))
