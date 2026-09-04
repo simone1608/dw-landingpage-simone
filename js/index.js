@@ -96,3 +96,52 @@ facilities.options.forEach(function (facilitie) {
         divElement
     );
 });
+
+
+//Sites section
+const sitesElement = document.querySelector(".sites");
+
+const headlinesElement = document.createElement("h2");
+headlinesElement.textContent = sites.headline;
+headlinesElement.classList.add("site-headline");
+
+const textsElement = document.createElement("p");
+textsElement.textContent = sites.text;
+textsElement.classList.add("site-text");
+
+const btnIconElement = document.createElement("button");
+btnIconElement.src = sites.btnicon;
+btnIconElement.classList.add("site-btnicon");
+
+sitesElement.append(
+    headlinesElement,
+    textsElement,
+    btnIconElement
+);
+
+sites.places.forEach(function (sites) {
+    const divElement = document.createElement("div");
+    divElement.classList.add("sites");
+
+    const imageElement = document.createElement("img");
+    imageElement.src = sites.img;
+    imageElement.classList.add("sites-img");
+
+    const nameElement = document.createElement("h3");
+    nameElement.textContent = sites.name;
+    nameElement.classList.add("sites-name");
+
+    const cityElement = document.createElement("p");
+    cityElement.textContent = sites.city;
+    cityElement.classList.add("sites-city");
+
+    divElement.append(
+        imageElement,
+        nameElement,
+        cityElement
+    );
+
+    sitesElement.append(
+        divElement
+    );
+})
