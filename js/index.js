@@ -7,6 +7,9 @@ const imageElement = document.createElement("img");
 imageElement.src = hero.image;
 imageElement.classList.add("hero-image");
 
+const contentElement = document.createElement("div");
+contentElement.classList.add("hero-content");
+
 const headlineElement = document.createElement("h1");
 headlineElement.textContent = hero.headline;
 headlineElement.classList.add("hero-headline");
@@ -19,11 +22,15 @@ const iconElement = document.createElement("img");
 iconElement.src = hero.icon;
 iconElement.classList.add("hero-icon");
 
-heroElement.append(
-    imageElement,
+contentElement.append(
     headlineElement,
     copyElement,
     iconElement
+);
+
+heroElement.append(
+    imageElement,
+    contentElement
 );
 
 
