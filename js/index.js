@@ -145,3 +145,34 @@ sites.places.forEach(function (sites) {
         divElement
     );
 })
+
+
+//Advantages section
+const advantagesElement = document.querySelector(".advantages");
+
+advantages.forEach(function (advantages) {
+    const divElement = document.createElement("div");
+    divElement.classList.add("advantages");
+
+    const iconElement = document.createElement("img");
+    iconElement.src = advantages.icon;
+    iconElement.classList.add("advantages-icon");
+
+    const headlineElement = document.createElement("h2");
+    headlineElement.textContent = advantages.headline;
+    headElement.classList.add("advantages-headline")
+
+    const textElement = document.createElement("p");
+    textElement.textContent = advantages.text;
+    textElement.classList.add("advantages-text");
+
+    divElement.append(
+        iconElement,
+        headlineElement,
+        textElement
+    );
+
+    advantagesElement.append(
+        divElement
+    );
+});
