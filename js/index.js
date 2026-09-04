@@ -176,3 +176,75 @@ advantages.forEach(function (advantages) {
         divElement
     );
 });
+
+
+//Footer section
+const footerElement = document.querySelector(".footer")
+
+const nameElement = document.createElement("p")
+nameElement.textContent = footer.name;
+nameElement.classList.add("foot-name");
+
+const headliElement = document.createElement("h3")
+headliElement.textContent = footer.headline;
+headliElement.classList.add("foot-headline")
+
+footerElement.append(
+    nameElement,
+    headliElement
+);
+
+footer.info.forEach(function (footer) {
+    const divElement = document.createElement("div");
+    divElement.classList.add("footer-div")
+
+    const headlineElement = document.createElement("h2");
+    headlineElement.textContent = footer.headline;
+    headlineElement.classList.add("footer-headline");
+
+    info.link.forEach(function (link) {
+        const linkElement = document.createElement("a");
+        linkElement.textContent = link;
+        linkElement.classList.add("footer-link");
+
+        divElement.append(
+            linkElement
+        );
+    });
+
+
+    divElement.append(
+        headlineElement
+    );
+
+    footerElement.append(
+        divElement
+    );
+
+
+});
+
+const bottomElement = document.createElement("div");
+bottomElement.classList.add("footer-bottom");
+
+const copysElement = document.createElement("p");
+copysElement.textContent = footer.bottom.copylinks
+copysElement.classList.add("footer-copy");
+
+bottomElement.append(
+    copysElement
+);
+
+footer.bottom.link.forEach(function (link) {
+    const linkElement = document.createElement("a");
+    linkElement.textContent = link;
+    linkElement.classList.add("footer-bottom-link");
+
+    bottomElement.append(
+        linkElement
+    );
+});
+
+footerElement.append(
+    bottomElement
+);
