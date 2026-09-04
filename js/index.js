@@ -50,11 +50,14 @@ services.forEach(function (service) {
     linkElement.textContent = service.linktext;
     linkElement.classList.add("service-link")
 
-    serviceElement.append(
+    divElement.append(
         illustrationElement,
         headlineElement,
         textElement,
-        linkElement,
+        linkElement
+    );
+
+    serviceElement.append(
         divElement
     );
 });

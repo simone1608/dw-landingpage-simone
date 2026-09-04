@@ -11,7 +11,26 @@
 
 /* #region hero */
 .hero-image {
-    width: 79.96rem;
+    width: 79rem;
 }
 
 /* #endregion hero */
+
+/* #region services */
+.service {
+    display: grid;
+}
+
+/* #endregion services */
+
+/* #region facilities */
+/* #endregion facilities */
+
+/* #region sites */
+/* #endregion sites */
+
+/* #region advantages */
+/* #endregion advantages */
+
+/* #region footer */
+/* #endregion footer */
