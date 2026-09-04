@@ -55,5 +55,44 @@ services.forEach(function (service) {
         headlineElement,
         textElement,
         linkElement,
-        divElement);
+        divElement
+    );
+});
+
+
+//Facilities section
+const facilitiesElement = document.querySelector(".facilities");
+
+const headElement = document.createElement("h2");
+headElement.textContent = facilities.headline;
+headElement.classList.add("facilities-headline")
+
+facilitiesElement.append(
+    headElement);
+
+facilities.options.forEach(function (facilitie) {
+    const divElement = document.createElement("div");
+    divElement.classList.add("facilitie");
+
+    const iconElement = document.createElement("img");
+    iconElement.src = facilitie.icon;
+    iconElement.classList.add("facilitie-icon");
+
+    const headlineElement = document.createElement("h3");
+    headlineElement.textContent = facilitie.headline;
+    headlineElement.classList.add("facilitie-headline")
+
+    const textElement = document.createElement("p");
+    textElement.textContent = facilitie.text;
+    textElement.classList.add("facilitie-text");
+
+    divElement.append(
+        iconElement,
+        headlineElement,
+        textElement
+    );
+
+    facilitiesElement.append(
+        divElement
+    );
 });
