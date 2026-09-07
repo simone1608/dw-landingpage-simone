@@ -213,6 +213,9 @@ advantages.forEach(function (advantages) {
 //Footer section
 const footerElement = document.querySelector(".footer")
 
+const footerIntro = document.createElement("div");
+footerIntro.classList.add("footer-intro");
+
 const nameElement = document.createElement("p")
 nameElement.textContent = footer.name;
 nameElement.classList.add("foot-name");
@@ -221,9 +224,13 @@ const headliElement = document.createElement("h3")
 headliElement.textContent = footer.headline;
 headliElement.classList.add("foot-headline")
 
-footerElement.append(
+footerIntro.append(
     nameElement,
     headliElement
+);
+
+footerElement.append(
+    footerIntro
 );
 
 footer.info.forEach(function (info) {
