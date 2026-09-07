@@ -46,8 +46,12 @@
 /* #endregion hero */
 
 /* #region services */
-.service {
-    display: grid;
+.services {
+    margin-top: 10rem;
+    display: flex;
+    gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 /* #endregion services */

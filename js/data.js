@@ -128,7 +128,7 @@ let footer = {
         },
     ],
     bottom: {
-        copylinks: "EazyCamper. All rights reserved.",
+        copylinks: "EasyCamper. All rights reserved.",
         link: [
             "About",
             "Site Map",

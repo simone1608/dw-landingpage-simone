@@ -204,13 +204,17 @@ footerElement.append(
     headliElement
 );
 
-footer.info.forEach(function (footer) {
+footer.info.forEach(function (info) {
     const divElement = document.createElement("div");
     divElement.classList.add("footer-div")
 
     const headlineElement = document.createElement("h2");
-    headlineElement.textContent = footer.headline;
+    headlineElement.textContent = info.headline;
     headlineElement.classList.add("footer-headline");
+
+    divElement.append(
+        headlineElement
+    );
 
     info.link.forEach(function (link) {
         const linkElement = document.createElement("a");
@@ -222,16 +226,9 @@ footer.info.forEach(function (footer) {
         );
     });
 
-
-    divElement.append(
-        headlineElement
-    );
-
     footerElement.append(
         divElement
     );
-
-
 });
 
 const bottomElement = document.createElement("div");
