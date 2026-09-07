@@ -132,7 +132,7 @@ let footer = {
         link: [
             "About",
             "Site Map",
-            "Terms",
+            "Teams",
             "Privacy Policy",
             "Teams",
         ],

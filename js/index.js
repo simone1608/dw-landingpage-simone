@@ -270,16 +270,22 @@ copysElement.classList.add("footer-copy");
 bottomElement.append(
     copysElement
 );
+const bottomLinkElement = document.createElement("div");
+bottomLinkElement.classList.add("footer-bottom-link")
 
 footer.bottom.link.forEach(function (link) {
     const linkElement = document.createElement("a");
     linkElement.textContent = link;
     linkElement.classList.add("footer-bottom-link");
 
-    bottomElement.append(
+    bottomLinkElement.append(
         linkElement
     );
 });
+
+bottomElement.append(
+    bottomLinkElement
+);
 
 footerElement.append(
     bottomElement
