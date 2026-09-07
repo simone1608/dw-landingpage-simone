@@ -111,6 +111,9 @@ facilities.options.forEach(function (facilitie) {
 //Sites section
 const sitesElement = document.querySelector(".sites");
 
+const divElement = document.createElement("div");
+divElement.classList.add("site");
+
 const headlinesElement = document.createElement("h2");
 headlinesElement.textContent = sites.headline;
 headlinesElement.classList.add("site-headline");
@@ -120,29 +123,44 @@ textsElement.textContent = sites.text;
 textsElement.classList.add("site-text");
 
 const btnIconElement = document.createElement("button");
-btnIconElement.src = sites.btnicon;
 btnIconElement.classList.add("site-btnicon");
 
-sitesElement.append(
+const arrowElement = document.createElement("img");
+arrowElement.src = sites.btnicon;
+arrowElement.classList.add("site-arrow");
+
+divElement.append(
     headlinesElement,
     textsElement,
     btnIconElement
+
 );
 
-sites.places.forEach(function (sites) {
+btnIconElement.append(
+    arrowElement
+);
+
+sitesElement.append(
+    divElement
+);
+
+const placesElement = document.createElement("div");
+placesElement.classList.add("sites-places");
+
+sites.places.forEach(function (site) {
     const divElement = document.createElement("div");
-    divElement.classList.add("sites");
+    divElement.classList.add("sites-div");
 
     const imageElement = document.createElement("img");
-    imageElement.src = sites.img;
+    imageElement.src = site.img;
     imageElement.classList.add("sites-img");
 
     const nameElement = document.createElement("h3");
-    nameElement.textContent = sites.name;
+    nameElement.textContent = site.name;
     nameElement.classList.add("sites-name");
 
     const cityElement = document.createElement("p");
-    cityElement.textContent = sites.city;
+    cityElement.textContent = site.city;
     cityElement.classList.add("sites-city");
 
     divElement.append(
@@ -151,10 +169,14 @@ sites.places.forEach(function (sites) {
         cityElement
     );
 
-    sitesElement.append(
+    placesElement.append(
         divElement
     );
 })
+
+sitesElement.append(
+    placesElement
+);
 
 
 //Advantages section
