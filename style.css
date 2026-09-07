@@ -74,6 +74,36 @@
 /* #endregion services */
 
 /* #region facilities */
+.facilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 10rem;
+}
+
+.facilities-headline {
+    width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.facilitie {
+    flex: 1;
+}
+
+.facilitie-headline {
+    font-size: 1.4rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.facilitie-text {
+    color: grey;
+    margin-bottom: 1rem;
+}
+
 /* #endregion facilities */
 
 /* #region sites */
