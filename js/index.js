@@ -184,7 +184,7 @@ const advantagesElement = document.querySelector(".advantages");
 
 advantages.forEach(function (advantages) {
     const divElement = document.createElement("div");
-    divElement.classList.add("advantages");
+    divElement.classList.add("advantage");
 
     const iconElement = document.createElement("img");
     iconElement.src = advantages.icon;
@@ -192,7 +192,7 @@ advantages.forEach(function (advantages) {
 
     const headlineElement = document.createElement("h2");
     headlineElement.textContent = advantages.headline;
-    headElement.classList.add("advantages-headline")
+    headlineElement.classList.add("advantages-headline")
 
     const textElement = document.createElement("p");
     textElement.textContent = advantages.text;

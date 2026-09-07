@@ -57,12 +57,14 @@
 
 .service-headline {
     font-size: 1.65rem;
+    min-height: 3rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
 
 .service-text {
     color: grey;
+    min-height: 3.5rem;
     margin-bottom: 1rem;
 }
 
@@ -163,6 +165,33 @@
 /* #endregion sites */
 
 /* #region advantages */
+.advantages {
+    display: flex;
+    gap: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 10rem;
+}
+
+.advantage {
+    flex: 1;
+}
+
+.advantages-icon {
+    width: 2rem;
+    margin-bottom: 3rem;
+}
+
+.advantages-headline {
+    font-size: 1.65rem;
+    min-height: 4rem;
+}
+
+.advantages-text {
+    color: grey;
+    margin-top: 1rem;
+}
+
 /* #endregion advantages */
 
 /* #region footer */
